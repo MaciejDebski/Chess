@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="129.0" prefWidth="71.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.p.lodz.view.controls.OptionsController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="306.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="System">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox>
+                           <children>
+                              <CheckBox fx:id="options_chb_maximized" mnemonicParsing="false" text="Maximized" />
+                              <CheckBox fx:id="options_chb_fullscreen" mnemonicParsing="false" text="Fullscreen" />
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <Label text="Language: " />
+                                    <ComboBox fx:id="options_combobox_language" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Gameplay">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="options_checkbox_showpossiblemoveshades" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" text="Show possible move shades" />
+                        <ChoiceBox fx:id="options_choicebox_gametime" layoutX="12.0" layoutY="65.0" prefWidth="150.0" />
+                        <Label layoutX="169.0" layoutY="18.0" />
+                        <Label layoutX="169.0" layoutY="69.0" text="Game Time" />
+                        <CheckBox fx:id="options_checkbox_inverttheboard" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" text="Invert the board" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <HBox layoutY="200.0" spacing="15.0">
+         <children>
+            <Button fx:id="options_bt_cancel" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="options_bt_save" mnemonicParsing="false" text="Save" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
